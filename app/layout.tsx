@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fazbila Bakery | Kue Rumahan Premium",
     description:
-      "Kue rumahan premium, fresh setiap hari. Order cepat via WhatsApp.",
+      "Manisnya Kebahagiaan di Setiap Gigitan. Order cepat via WhatsApp.",
     url: "https://fazbila-bakery.vercel.app",
     siteName: "Fazbila Bakery",
     images: [
