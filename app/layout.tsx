@@ -10,7 +10,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Fazbila Bakery",
   description:
-    "Fazbila Bakery menyediakan kue rumahan premium, fresh setiap hari. Pesan kue dengan mudah dan cepat melalui WhatsApp.",
+    "Manisnya Kebahagiaan di Setiap Gigitan. Pesan kue dengan mudah dan cepat melalui WhatsApp.",
   keywords: [
     "Fazbila Bakery",
     "bakery rumahan",
