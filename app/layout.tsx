@@ -8,26 +8,26 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Fazbila Bakery",
+  title: "Fazbila Bakery | Snack & Oleh-oleh Sukoharjo",
   description:
-    "Manisnya Kebahagiaan di Setiap Gigitan. Pesan kue dengan mudah dan cepat melalui WhatsApp.",
+    "Snack & Kue Kering Oleh-oleh Sukoharjo. Halal Certified. Pesan mudah via WhatsApp.",
   keywords: [
     "Fazbila Bakery",
-    "bakery rumahan",
-    "toko kue",
-    "kue rumahan premium",
-    "pesan kue via whatsapp",
-    "bakery terdekat",
+    "oleh oleh sukoharjo",
+    "snack box sukoharjo",
+    "kue kering sukoharjo",
+    "bakery sukoharjo",
+    "pesan snack box via whatsapp",
   ],
   openGraph: {
-    title: "Fazbila Bakery | Kue Rumahan Premium",
+    title: "Fazbila Bakery | Snack & Oleh-oleh Sukoharjo",
     description:
-      "Manisnya Kebahagiaan di Setiap Gigitan. Order cepat via WhatsApp.",
+      "Snack & Kue Kering Oleh-oleh Sukoharjo. Halal Certified. Order cepat via WhatsApp.",
     url: "https://fazbila-bakery.vercel.app",
     siteName: "Fazbila Bakery",
     images: [
       {
-        url: "/logo FAZBILA.png",
+        url: "https://fazbila-bakery.vercel.app/logo.png",
         width: 800,
         height: 800,
         alt: "Fazbila Bakery",
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fazbila Bakery",
+    title: "Fazbila Bakery | Snack & Oleh-oleh Sukoharjo",
     description:
-      "Kue rumahan premium, fresh setiap hari. Pesan via WhatsApp.",
-    images: ["/logo FAZBILA.png"],
+      "Snack & Kue Kering Oleh-oleh Sukoharjo. Halal Certified.",
+    images: ["https://fazbila-bakery.vercel.app/logo.png"],
   },
 };
 
