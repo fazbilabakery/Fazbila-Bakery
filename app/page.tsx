@@ -117,17 +117,6 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Sticky WhatsApp Mobile Only */}
-      <div className="fixed bottom-4 left-4 right-4 sm:hidden">
-        <a
-          href="https://wa.me/6285878269410"
-          className="flex items-center justify-center gap-3 w-full rounded-2xl bg-[#25D366] text-white py-4 font-semibold shadow-xl active:scale-[0.97] transition"
-        >
-          <FaWhatsapp size={20} />
-          Pesan Sekarang
-        </a>
-      </div>
-
     </main>
   );
 }
