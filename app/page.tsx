@@ -1,171 +1,118 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { IconType } from "react-icons";
 import {
   FaWhatsapp,
   FaInstagram,
+  FaBookOpen,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { HiOutlineDocumentText } from "react-icons/hi";
-
-type LinkItem = {
-  id: string;
-  label: string;
-  url: string;
-  desc: string;
-  icon: IconType;
-  color: string;
-};
-
-const LINKS: LinkItem[] = [
-  {
-    id: "whatsapp",
-    label: "Order via WhatsApp",
-    url: "https://wa.me/6285878269410",
-    desc: "Pesan kue & konsultasi cepat",
-    icon: FaWhatsapp,
-    color: "#22C55E",
-  },
-  {
-    id: "instagram",
-    label: "Instagram",
-    url: "https://www.instagram.com/fazbila_bakery",
-    desc: "Produk, testimoni & promo",
-    icon: FaInstagram,
-    color: "#E1306C",
-  },
-  {
-    id: "maps",
-    label: "Lokasi Toko",
-    url: "https://maps.app.goo.gl/mStdKAbndMLrehF19",
-    desc: "Ambil pesanan langsung",
-    icon: FaMapMarkerAlt,
-    color: "#F97316",
-  },
-  {
-    id: "catalog",
-    label: "Katalog Produk",
-    url: "https://drive.google.com/drive/folders/1zVWYjDxEk8lFpg4E6TazinZCj6YvRGb7?usp=sharing",
-    desc: "Lihat semua menu",
-    icon: HiOutlineDocumentText,
-    color: "#6366F1",
-  },
-];
 
 export default function Page() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 200);
+  }, []);
+
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-[#FFF7ED] via-[#FFFDF9] to-white flex items-center justify-center px-4 overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-[#FFF9F2] via-[#FDEEDC] to-[#F6E5C6] flex items-center justify-center px-6 py-14 overflow-hidden">
 
-      {/* Soft bakery glow */}
-      <div className="absolute -top-32 -right-32 h-[380px] w-[380px] rounded-full bg-amber-300/30 blur-[120px]" />
-      <div className="absolute -bottom-32 -left-32 h-[380px] w-[380px] rounded-full bg-orange-300/30 blur-[120px]" />
+      {/* Pattern Halus */}
+      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#C6A64B_1px,transparent_1px)] [background-size:26px_26px]" />
 
-      {/* Floating WhatsApp */}
-      <a
-        href="https://wa.me/6285878269410"
-        target="_blank"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition"
+      <div
+        className={`relative w-full max-w-md rounded-3xl p-8 text-center transition-all duration-1000 ${
+          loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        } bg-white/80 backdrop-blur-xl shadow-2xl border border-[#EAD7A1]`}
       >
-        <FaWhatsapp className="text-3xl" />
-      </a>
-
-      {/* Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 32 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full max-w-md rounded-[36px] bg-white/80 backdrop-blur-xl border border-white/60 shadow-[0_30px_80px_rgba(0,0,0,0.12)] p-8 text-center"
-      >
-
-        {/* Logo */}
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center"
-        >
-          <div className="relative rounded-full bg-gradient-to-br from-amber-400 to-orange-400 p-[4px] shadow-xl">
-            <div className="rounded-full bg-white p-3">
-              <Image
-                src="/logo FAZBILA.png"
-                alt="Fazbila Bakery"
-                width={120}
-                height={120}
-                priority
-                className="rounded-full"
-              />
-            </div>
+        {/* LOGO */}
+        <div className="flex flex-col items-center">
+          <div className="relative w-28 h-28 mb-4">
+            <Image
+              src="/logo.png"
+              alt="Fazbila Bakery"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-        </motion.div>
 
-        {/* Brand */}
-        <h1 className="mt-6 text-[28px] font-semibold tracking-tight text-zinc-800">
-          Fazbila Bakery
-        </h1>
+          {/* HEADLINE */}
+          <h1 className="text-2xl font-semibold text-[#5B2B1E] leading-snug">
+            Toko Snack & Kue Kering
+            <br />
+            Oleh-oleh Sukoharjo
+          </h1>
 
-        <p className="mt-2 text-sm text-zinc-500 leading-relaxed">
-          Manisnya kebahagiaan <br className="sm:hidden" />
-          di setiap gigitan 🍰
-        </p>
+          <p className="mt-2 text-sm text-gray-600">
+            Untuk Acara • Instansi • Pengajian • Wisuda
+          </p>
 
-        {/* Divider */}
-        <div className="my-6 flex items-center justify-center gap-4">
-          <span className="h-px w-12 bg-zinc-300" />
-          <span className="text-xs text-amber-500">✦</span>
-          <span className="h-px w-12 bg-zinc-300" />
+          <div className="mt-3 text-xs tracking-[0.25em] text-[#C6A64B] uppercase font-medium">
+            Halal Certified حلال
+          </div>
         </div>
 
-        {/* CTA Primary */}
-        <motion.a
-          href="https://wa.me/6285878269410"
-          target="_blank"
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.96 }}
-          className="mb-6 block rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 py-4 text-base font-semibold text-white shadow-lg shadow-amber-500/30"
-        >
-          🍰 Order Sekarang
-        </motion.a>
-
-        {/* Links */}
-        <div className="grid gap-4">
-          {LINKS.map((link, index) => (
-            <motion.a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * index }}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white/70 p-4 hover:bg-amber-50 hover:shadow-md transition"
-            >
-              <div
-                className="flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow"
-                style={{ color: link.color }}
-              >
-                <link.icon className="text-xl" />
-              </div>
-
-              <div className="flex flex-col text-left">
-                <span className="font-semibold text-zinc-800 text-sm">
-                  {link.label}
-                </span>
-                <span className="text-xs text-zinc-500">
-                  {link.desc}
-                </span>
-              </div>
-            </motion.a>
-          ))}
+        {/* CTA UTAMA */}
+        <div className="mt-8">
+          <a
+            href="https://wa.me/628XXXXXXXXXX"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-3 w-full rounded-xl bg-[#5B2B1E] text-white py-4 px-6 font-medium text-base transition-all duration-300 hover:scale-[1.05] hover:bg-[#C6A64B] shadow-lg"
+          >
+            <FaWhatsapp size={20} />
+            Pesan Sekarang via WhatsApp
+          </a>
         </div>
 
-        {/* Footer */}
-        <p className="mt-10 text-xs tracking-wide text-zinc-400">
-          Homemade bakery • Fresh daily • Made with love
-        </p>
-      </motion.div>
+        {/* LINK KATALOG */}
+        <div className="mt-6">
+          <a
+            href="https://drive.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 text-sm text-[#5B2B1E] font-medium hover:text-[#C6A64B] transition"
+          >
+            <FaBookOpen />
+            Lihat Katalog Lengkap
+          </a>
+        </div>
+
+        {/* SOCIAL + MAPS */}
+        <div className="mt-6 flex justify-center gap-6 text-[#5B2B1E]">
+          <a
+            href="https://instagram.com/fazbilabakery"
+            target="_blank"
+            className="hover:text-[#C6A64B] transition"
+          >
+            <FaInstagram size={20} />
+          </a>
+
+          <a
+            href="https://maps.google.com/"
+            target="_blank"
+            className="hover:text-[#C6A64B] transition"
+          >
+            <FaMapMarkerAlt size={20} />
+          </a>
+        </div>
+
+        {/* USP */}
+        <div className="mt-8 text-xs text-gray-500 leading-relaxed">
+          ✔ Fresh by Order <br />
+          ✔ Bisa Custom Snack Box <br />
+          ✔ Kemasan Rapi & Higienis
+        </div>
+
+        {/* FOOTER */}
+        <div className="mt-10 text-[11px] text-gray-400">
+          © {new Date().getFullYear()} Fazbila Bakery <br />
+          Gumpang – Kartasura, Sukoharjo
+        </div>
+      </div>
     </main>
   );
 }
