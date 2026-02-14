@@ -56,7 +56,7 @@ export default function Page() {
         {/* CTA */}
         <div className="mt-8">
           <a
-            href="https://wa.me/6285878269410"
+            href="https://wa.me/6285878269410?text=Halo%20Dimsum%20Fazbila,%20saya%20mau%20order"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 w-full rounded-2xl bg-gradient-to-r from-[#5B2B1E] to-[#C6A64B] text-white py-5 text-lg font-semibold shadow-lg active:scale-[0.97] transition"
@@ -115,7 +115,7 @@ export default function Page() {
       </div>
 
       {/* Sticky WhatsApp Mobile */}
-      <div className="fixed bottom-4 left-4 right-4 sm:hidden">
+      {/* <div className="fixed bottom-4 left-4 right-4 sm:hidden">
         <a
           href="https://wa.me/6285878269410"
           className="flex items-center justify-center gap-3 w-full rounded-2xl bg-[#25D366] text-white py-4 font-semibold shadow-xl active:scale-[0.97] transition"
@@ -123,7 +123,7 @@ export default function Page() {
           <FaWhatsapp size={20} />
           Pesan Sekarang
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }
