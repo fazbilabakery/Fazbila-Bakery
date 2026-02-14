@@ -17,15 +17,13 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-[#FFF9F2] via-[#FDEEDC] to-[#F6E5C6] flex items-center justify-center px-5 pt-14 pb-28 overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-[#FFF9F2] via-[#FDEEDC] to-[#F6E5C6] flex items-center justify-center px-5 pt-12 pb-32 overflow-hidden">
 
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#C6A64B_1px,transparent_1px)] [background-size:24px_24px]" />
-
+      {/* Card */}
       <div
-        className={`relative w-full max-w-md rounded-3xl p-7 sm:p-10 text-center transition-all duration-700 ${
+        className={`relative w-full max-w-md rounded-3xl p-7 text-center transition-all duration-700 ${
           loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        } bg-white/90 backdrop-blur-xl shadow-2xl border border-[#EAD7A1]`}
+        } bg-white shadow-xl border border-[#EAD7A1]`}
       >
         {/* Logo */}
         <div className="flex flex-col items-center">
@@ -55,16 +53,16 @@ export default function Page() {
           </div>
         </div>
 
-        {/* CTA Utama */}
+        {/* CTA */}
         <div className="mt-8">
           <a
             href="https://wa.me/6285878269410"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 w-full rounded-2xl bg-gradient-to-r from-[#5B2B1E] to-[#C6A64B] text-white py-5 text-lg font-semibold shadow-lg active:scale-[0.98] transition"
+            className="flex items-center justify-center gap-3 w-full rounded-2xl bg-gradient-to-r from-[#5B2B1E] to-[#C6A64B] text-white py-5 text-lg font-semibold shadow-lg active:scale-[0.97] transition"
           >
             <FaWhatsapp size={22} />
-            Pesan Sekarang via WhatsApp
+            Pesan Sekarang
           </a>
         </div>
 
@@ -77,20 +75,19 @@ export default function Page() {
             className="flex items-center justify-center gap-2 text-sm text-[#5B2B1E] font-medium hover:text-[#C6A64B] transition"
           >
             <FaBookOpen />
-            Lihat Katalog Lengkap
+            Lihat Katalog
           </a>
         </div>
 
-        {/* Social & Maps */}
-        <div className="mt-8 flex justify-center gap-10 text-[#5B2B1E]">
-
+        {/* Social */}
+        <div className="mt-8 flex justify-center gap-12 text-[#5B2B1E]">
           <a
-            href="https://www.instagram.com/fazbila.bakery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            href="https://www.instagram.com/fazbila.bakery"
             target="_blank"
             className="flex flex-col items-center hover:text-[#C6A64B] transition"
           >
-            <FaInstagram size={22} />
-            
+            <FaInstagram size={24} />
+            <span className="text-[11px] mt-1">Instagram</span>
           </a>
 
           <a
@@ -98,8 +95,8 @@ export default function Page() {
             target="_blank"
             className="flex flex-col items-center hover:text-[#C6A64B] transition"
           >
-            <FaMapMarkerAlt size={22} />
-            
+            <FaMapMarkerAlt size={24} />
+            <span className="text-[11px] mt-1">Kunjungi Toko</span>
           </a>
         </div>
 
@@ -117,6 +114,16 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Sticky WhatsApp Mobile */}
+      <div className="fixed bottom-4 left-4 right-4 sm:hidden">
+        <a
+          href="https://wa.me/6285878269410"
+          className="flex items-center justify-center gap-3 w-full rounded-2xl bg-[#25D366] text-white py-4 font-semibold shadow-xl active:scale-[0.97] transition"
+        >
+          <FaWhatsapp size={20} />
+          Pesan Sekarang
+        </a>
+      </div>
     </main>
   );
 }
