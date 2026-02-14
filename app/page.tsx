@@ -56,7 +56,7 @@ export default function Page() {
         {/* CTA */}
         <div className="mt-8">
           <a
-            href="https://wa.me/6285878269410?text=Halo%20Dimsum%20Fazbila,%20saya%20mau%20order"
+            href="https://wa.me/6285878269410?text=Halo%20Fazbila%20Bakery,%20saya%20mau%20order"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 w-full rounded-2xl bg-gradient-to-r from-[#5B2B1E] to-[#C6A64B] text-white py-5 text-lg font-semibold shadow-lg active:scale-[0.97] transition"
